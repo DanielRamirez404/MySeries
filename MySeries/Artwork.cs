@@ -1,50 +1,59 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 
 namespace MySeries.Classes
 {
-    public class Artwork
+    public abstract class Artwork
     {
-        protected string title;
-        protected string author;
-        protected string date;
-        protected int rating;
-        protected string rewiew;
+        protected string Title { get; set; }
+        protected string Author { get; set; }
+        protected string Date { get; set; }
+        protected string Genre { get; set; }
+        protected int Rating { get; set; }
+        protected string Rewiew { get; set; }
 
-        public Artwork(string title, string author, string date, int rating, string rewiew)
+        public Artwork(string title, string author, string date, string genre, int rating, string rewiew)
         {
-            this.title = title;
-            this.author = author;
-            this.date = date;
-            this.rating = rating;
-            this.rewiew = rewiew;
+            this.Title = title;
+            this.Author = author;
+            this.Date = date;
+            this.Genre = genre;
+            this.Rating = rating;
+            this.Rewiew = rewiew;
         }
 
-        float getStars()
+        public float GetStars()
         {
-            return (float)rating * 0.5f;
+            return Rating * 0.5f;
         }
 
-        void copy(Artwork original)
+        public abstract string GetReference();
+
+        protected string GetAuthorLastName()
         {
-            this.title = original.title;
-            this.author = original.author;
-            this.date = original.date;
-            this.rating = original.rating;
-            this.rewiew = original.rewiew;
+            for (int i = 0; i < Author.Length; i++)
+            {
+                if (Author[i] == ' ')
+                    return Author.Substring(Author.Length - i, 1);
+            }
+
+            return "";
         }
 
-        void modify(string title, string author, string date, int rating, string rewiew)
+        protected string GetAuthorFirstName()
         {
-            this.title = title;
-            this.author = author;
-            this.date = date;
-            this.rating = rating;
-            this.rewiew = rewiew;
+            for (int i = 0; i < Author.Length; i++)
+            {
+                if (Author[i] == ' ')
+                    return Author.Substring(0, i + 1);
+            }
+
+            return Author;
         }
     }
 }

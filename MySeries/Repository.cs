@@ -39,5 +39,7 @@ namespace MySeries.Classes
         {
             return list.AsReadOnly();            
         }
+
+        //todo: update(T element)
     }
 }
