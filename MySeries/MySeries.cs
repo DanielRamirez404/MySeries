@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySeries.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,12 @@ namespace MySeries
     public partial class MySeries : Form
     {
         private int childFormNumber = 0;
+        public static Repository<TV> MyTVList = new Repository<TV>();
+        public static Repository<Anime> MyAnimeList = new Repository<Anime>();
+        public static Repository<Book> MyBookList = new Repository<Book>();
+        public static Repository<Comic> MyComicList = new Repository<Comic>();
+        public static Repository<Manga> MyMangaList = new Repository<Manga>();
+        public static Repository<Videogame> MyGameList = new Repository<Videogame>();
 
         public MySeries()
         {
@@ -96,7 +103,12 @@ namespace MySeries
 
         private void MySeries_Load(object sender, EventArgs e)
         {
-
+            TV series = new TV("Stranger Things", "Duffer", "2016", "thriller", 9, "Pretty good", 34, 45, "Duffer", "Duffer"); 
+            TV series2 = new TV("Breaking Bad", "Vince Gilligan", "2008", "drama", 8, "Awesome", 62, 45, "Vince Gilligan", "Vince Gilligan");
+            TV series3 = new TV("Wednesday", "Alfred Gough", "2022", "comedy", 10, "I love Jenna Ortega", 8, 45, "Tim Burton", "Tim Burton");
+            MyTVList.add(series);
+            MyTVList.add(series2);
+            MyTVList.add(series3);
         }
 
         private void toolTip_Popup(object sender, PopupEventArgs e)
@@ -112,6 +124,22 @@ namespace MySeries
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             NewEntry form = new NewEntry();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void animeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void toolStripMenuItem11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem10_Click(object sender, EventArgs e)
+        {
+            MyLists form = new MyLists();
             form.MdiParent = this;
             form.Show();
         }

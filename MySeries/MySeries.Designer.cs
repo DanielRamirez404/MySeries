@@ -31,14 +31,6 @@
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem10 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem11 = new System.Windows.Forms.ToolStripMenuItem();
-            this.tVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.animeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem12 = new System.Windows.Forms.ToolStripMenuItem();
-            this.bookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.comicToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mangaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem13 = new System.Windows.Forms.ToolStripMenuItem();
             this.newEntryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -71,70 +63,12 @@
             // 
             // toolStripMenuItem10
             // 
-            this.toolStripMenuItem10.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem11,
-            this.toolStripMenuItem12,
-            this.toolStripMenuItem13});
             this.toolStripMenuItem10.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripMenuItem10.Name = "toolStripMenuItem10";
             this.toolStripMenuItem10.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
             this.toolStripMenuItem10.Size = new System.Drawing.Size(69, 23);
             this.toolStripMenuItem10.Text = "MyLists";
-            // 
-            // toolStripMenuItem11
-            // 
-            this.toolStripMenuItem11.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tVToolStripMenuItem,
-            this.animeToolStripMenuItem});
-            this.toolStripMenuItem11.Name = "toolStripMenuItem11";
-            this.toolStripMenuItem11.Size = new System.Drawing.Size(148, 24);
-            this.toolStripMenuItem11.Text = "Cinema";
-            // 
-            // tVToolStripMenuItem
-            // 
-            this.tVToolStripMenuItem.Name = "tVToolStripMenuItem";
-            this.tVToolStripMenuItem.Size = new System.Drawing.Size(118, 24);
-            this.tVToolStripMenuItem.Text = "TV";
-            // 
-            // animeToolStripMenuItem
-            // 
-            this.animeToolStripMenuItem.Name = "animeToolStripMenuItem";
-            this.animeToolStripMenuItem.Size = new System.Drawing.Size(118, 24);
-            this.animeToolStripMenuItem.Text = "Anime";
-            // 
-            // toolStripMenuItem12
-            // 
-            this.toolStripMenuItem12.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bookToolStripMenuItem,
-            this.comicToolStripMenuItem,
-            this.mangaToolStripMenuItem});
-            this.toolStripMenuItem12.Name = "toolStripMenuItem12";
-            this.toolStripMenuItem12.Size = new System.Drawing.Size(148, 24);
-            this.toolStripMenuItem12.Text = "Book";
-            // 
-            // bookToolStripMenuItem
-            // 
-            this.bookToolStripMenuItem.Name = "bookToolStripMenuItem";
-            this.bookToolStripMenuItem.Size = new System.Drawing.Size(121, 24);
-            this.bookToolStripMenuItem.Text = "Book";
-            // 
-            // comicToolStripMenuItem
-            // 
-            this.comicToolStripMenuItem.Name = "comicToolStripMenuItem";
-            this.comicToolStripMenuItem.Size = new System.Drawing.Size(121, 24);
-            this.comicToolStripMenuItem.Text = "Comic";
-            // 
-            // mangaToolStripMenuItem
-            // 
-            this.mangaToolStripMenuItem.Name = "mangaToolStripMenuItem";
-            this.mangaToolStripMenuItem.Size = new System.Drawing.Size(121, 24);
-            this.mangaToolStripMenuItem.Text = "Manga";
-            // 
-            // toolStripMenuItem13
-            // 
-            this.toolStripMenuItem13.Name = "toolStripMenuItem13";
-            this.toolStripMenuItem13.Size = new System.Drawing.Size(148, 24);
-            this.toolStripMenuItem13.Text = "Videogame";
+            this.toolStripMenuItem10.Click += new System.EventHandler(this.toolStripMenuItem10_Click);
             // 
             // newEntryToolStripMenuItem
             // 
@@ -148,7 +82,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::MySeries.Properties.Resources._2407d597428ad43a80cbdf04252c3da9;
+            this.BackgroundImage = global::MySeries.Properties.Resources.vector_cute_blue_gingham_plaid_checkered_pattern_with_heart_star_background_wallpaper_921039_4506;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(580, 421);
             this.Controls.Add(this.menuStrip);
@@ -171,14 +105,6 @@
         private System.Windows.Forms.ToolStripMenuItem newEntryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem10;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem11;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem12;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem13;
-        private System.Windows.Forms.ToolStripMenuItem tVToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem animeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bookToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem comicToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem mangaToolStripMenuItem;
     }
 }
 

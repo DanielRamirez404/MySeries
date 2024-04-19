@@ -10,12 +10,12 @@ namespace MySeries.Classes
 {
     public abstract class Artwork
     {
-        protected string Title { get; set; }
-        protected string Author { get; set; }
-        protected string Date { get; set; }
-        protected string Genre { get; set; }
-        protected int Rating { get; set; }
-        protected string Rewiew { get; set; }
+        public string Title { get; set; }
+        public string Author { get; set; }
+        public string Date { get; set; }
+        public string Genre { get; set; }
+        public int Rating { get; set; }
+        public string Rewiew { get; set; }
 
         public Artwork(string title, string author, string date, string genre, int rating, string rewiew)
         {
