@@ -11,23 +11,24 @@ namespace MySeries.Classes
         public string Publisher { get; set; }
         public int Volumes { get; set; }
         public int PagesPerVolume { get; set; }
-        protected float minutesPerPage = 1.7f;
+        protected float MinutesPerPage { get; set; }
 
         public Book(string title, string author, string date, string genre, int rating, string rewiew, string publisher, int volumes, int pagesPerVolume) : base(title, author, date, genre, rating, rewiew)
         {
             Publisher = publisher;
             Volumes = volumes;
             PagesPerVolume = pagesPerVolume;
+            MinutesPerPage = 1.7f;
         }
 
-        public float GetSeriesReadingTime()
+        public virtual float GetSeriesReadingTime()
         {
             return Volumes * GetVolumeReadingTime();
         }
 
         public float GetVolumeReadingTime()
         {
-            return minutesPerPage * PagesPerVolume;
+            return MinutesPerPage * PagesPerVolume;
         }
 
         public override string GetReference()
