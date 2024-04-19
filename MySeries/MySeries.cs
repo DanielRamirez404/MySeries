@@ -93,5 +93,27 @@ namespace MySeries
                 childForm.Close();
             }
         }
+
+        private void MySeries_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolTip_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            NewEntry form = new NewEntry();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }
