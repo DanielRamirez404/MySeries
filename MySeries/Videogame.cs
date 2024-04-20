@@ -19,8 +19,12 @@ namespace MySeries.Classes
         }
         public override string GetReference()
         {
-            //todo:
-            return "";
+            string lastName = GetAuthorLastName();
+
+            if (lastName == "")
+                return GetAuthorFirstName() + " (" + Date + "). " + Title + " [Video game]. " + DevelopmentCompany;
+
+            return lastName + ", " + GetAuthorFirstName()[0] + " (" + Date + "). " + Title + " [Video game]. " + DevelopmentCompany;
         }
     }
 }

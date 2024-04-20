@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,14 +17,19 @@ namespace MySeries.Classes
 
         public override string GetCredits()
         {
-            //todo
-            return "";
+            return "Made by:\n"
+                + "Author: " + Author + "\n"
+                + "Animation Studio: " + Studio;
         }
 
         public override string GetReference()
         {
-            //todo
-            return "";
+            string lastName = GetAuthorLastName();
+
+            if (lastName == "")
+                return GetAuthorFirstName() + " (" + Date + "). " + Title + " [Anime]. " + Studio;
+
+            return lastName + ", " + GetAuthorFirstName()[0] + " (" + Date + "). " + Title + " [Anime]. " + Studio;
         }
     }
 }

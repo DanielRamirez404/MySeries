@@ -118,10 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="plus-304947_1280" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plus-304947_1280.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="2407d597428ad43a80cbdf04252c3da9" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2407d597428ad43a80cbdf04252c3da9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="vector-cute-blue-gingham-plaid-checkered-pattern-with-heart-star-background-wallpaper_921039-4506" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vector-cute-blue-gingham-plaid-checkered-pattern-with-heart-star-background-wallpaper_921039-4506.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="list-11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\list-11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="free-plus-1478291-1251151" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\free-plus-1478291-1251151.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

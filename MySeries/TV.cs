@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,14 +20,20 @@ namespace MySeries.Classes
 
         public override string GetCredits()
         {
-            //todo
-            return "";
+            return "Made by:\n"
+                + "Author: " + Author + "\n"
+                + "Director: " + Director + "\n"
+                + "Producer: " + Producer;
         }
 
         public override string GetReference()
         {
-            //todo
-            return "";
+            string lastName = GetAuthorLastName();
+
+            if (lastName == "")
+                return GetAuthorFirstName() + " (" + Director + "). " + " (" + Date + "). " + Title + " [Film]. " + Producer;
+
+            return lastName + ", " + GetAuthorFirstName()[0] + " (" + Director + "). " + " (" + Date + "). " + Title + " [Film]. " + Producer;
         }
     }
 }

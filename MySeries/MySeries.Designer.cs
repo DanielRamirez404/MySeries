@@ -47,7 +47,7 @@
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip.Size = new System.Drawing.Size(580, 27);
+            this.menuStrip.Size = new System.Drawing.Size(580, 28);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "Menu";
             // 
@@ -55,27 +55,30 @@
             // 
             this.toolStripMenuItem1.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.toolStripMenuItem1.Image = global::MySeries.Properties.Resources.free_plus_1478291_1251151;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(86, 23);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(106, 24);
             this.toolStripMenuItem1.Text = "New Entry";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // toolStripMenuItem10
             // 
             this.toolStripMenuItem10.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripMenuItem10.Image = global::MySeries.Properties.Resources.list_11;
             this.toolStripMenuItem10.Name = "toolStripMenuItem10";
             this.toolStripMenuItem10.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.toolStripMenuItem10.Size = new System.Drawing.Size(69, 23);
+            this.toolStripMenuItem10.Size = new System.Drawing.Size(89, 24);
             this.toolStripMenuItem10.Text = "MyLists";
             this.toolStripMenuItem10.Click += new System.EventHandler(this.toolStripMenuItem10_Click);
             // 
             // newEntryToolStripMenuItem
             // 
             this.newEntryToolStripMenuItem.Font = new System.Drawing.Font("Yu Gothic UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newEntryToolStripMenuItem.Image = global::MySeries.Properties.Resources.search_icon;
             this.newEntryToolStripMenuItem.Name = "newEntryToolStripMenuItem";
             this.newEntryToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
-            this.newEntryToolStripMenuItem.Size = new System.Drawing.Size(63, 23);
+            this.newEntryToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
             this.newEntryToolStripMenuItem.Text = "Search";
             this.newEntryToolStripMenuItem.Click += new System.EventHandler(this.newEntryToolStripMenuItem_Click);
             // 

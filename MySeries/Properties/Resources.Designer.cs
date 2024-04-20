@@ -73,6 +73,46 @@ namespace MySeries.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap free_plus_1478291_1251151 {
+            get {
+                object obj = ResourceManager.GetObject("free-plus-1478291-1251151", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap list_11 {
+            get {
+                object obj = ResourceManager.GetObject("list-11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plus_304947_1280 {
+            get {
+                object obj = ResourceManager.GetObject("plus-304947_1280", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_icon {
+            get {
+                object obj = ResourceManager.GetObject("search-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap vector_cute_blue_gingham_plaid_checkered_pattern_with_heart_star_background_wallpaper_921039_4506 {
             get {
                 object obj = ResourceManager.GetObject("vector-cute-blue-gingham-plaid-checkered-pattern-with-heart-star-background-wallp" +
