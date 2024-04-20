@@ -77,6 +77,7 @@
             this.newEntryToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
             this.newEntryToolStripMenuItem.Size = new System.Drawing.Size(63, 23);
             this.newEntryToolStripMenuItem.Text = "Search";
+            this.newEntryToolStripMenuItem.Click += new System.EventHandler(this.newEntryToolStripMenuItem_Click);
             // 
             // MySeries
             // 

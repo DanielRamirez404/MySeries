@@ -143,5 +143,12 @@ namespace MySeries
             form.MdiParent = this;
             form.Show();
         }
+
+        private void newEntryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Search form = new Search();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }
