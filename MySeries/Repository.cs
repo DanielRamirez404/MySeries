@@ -40,6 +40,13 @@ namespace MySeries.Classes
             return list.AsReadOnly();            
         }
 
-        //todo: update(T element)
+        public void overwrite(T oldElement, T newElement)
+        {
+            int index = list.IndexOf(oldElement);
+            if (index != -1)
+            {
+                list[index] = newElement;
+            }
+        }
     }
 }
