@@ -1,4 +1,5 @@
 ﻿using MySeries.Classes;
+using SQL;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -103,6 +104,7 @@ namespace MySeries
 
         private void MySeries_Load(object sender, EventArgs e)
         {
+            SQLConnection.open();
             TV series = new TV("Stranger Things", "Duffer", "2016", "thriller", 9, "Pretty good", 34, 45, "Duffer", "Duffer"); 
             TV series2 = new TV("Breaking Bad", "Vince Gilligan", "2008", "drama", 8, "Awesome", 62, 45, "Vince Gilligan", "Vince Gilligan");
             TV series3 = new TV("Wednesday", "Alfred Gough", "2022", "comedy", 10, "I love Jenna Ortega", 8, 45, "Tim Burton", "Tim Burton");

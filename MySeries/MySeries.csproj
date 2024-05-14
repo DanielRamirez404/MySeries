@@ -50,18 +50,46 @@
     <Compile Include="Cinema.cs" />
     <Compile Include="Artwork.cs" />
     <Compile Include="Book.cs" />
+    <Compile Include="Comic.cs" />
+    <Compile Include="Manga.cs" />
+    <Compile Include="MyLists.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyLists.Designer.cs">
+      <DependentUpon>MyLists.cs</DependentUpon>
+    </Compile>
     <Compile Include="MySeries.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MySeries.Designer.cs">
       <DependentUpon>MySeries.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewEntry.Designer.cs">
+      <DependentUpon>NewEntry.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository.cs" />
+    <Compile Include="Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search.Designer.cs">
+      <DependentUpon>Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SQLConnection.cs" />
     <Compile Include="TV.cs" />
+    <Compile Include="Videogame.cs" />
+    <EmbeddedResource Include="MyLists.resx">
+      <DependentUpon>MyLists.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MySeries.resx">
       <DependentUpon>MySeries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewEntry.resx">
+      <DependentUpon>NewEntry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -73,6 +101,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Search.resx">
+      <DependentUpon>Search.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
