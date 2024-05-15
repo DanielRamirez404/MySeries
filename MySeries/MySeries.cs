@@ -15,12 +15,12 @@ namespace MySeries
     public partial class MySeries : Form
     {
         private int childFormNumber = 0;
-        public static Repository<TV> MyTVList = new Repository<TV>();
-        public static Repository<Anime> MyAnimeList = new Repository<Anime>();
-        public static Repository<Book> MyBookList = new Repository<Book>();
-        public static Repository<Comic> MyComicList = new Repository<Comic>();
-        public static Repository<Manga> MyMangaList = new Repository<Manga>();
-        public static Repository<Videogame> MyGameList = new Repository<Videogame>();
+        public static Repository MyTVList = new Repository("TV");
+        public static Repository MyAnimeList = new Repository("Anime");
+        public static Repository MyBookList = new Repository("Book");
+        public static Repository MyComicList = new Repository("Comics");
+        public static Repository MyMangaList = new Repository("Mangas");
+        public static Repository MyGameList = new Repository("Videogames");
 
         public MySeries()
         {
@@ -151,6 +151,11 @@ namespace MySeries
             Search form = new Search();
             form.MdiParent = this;
             form.Show();
+        }
+
+        private void menuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

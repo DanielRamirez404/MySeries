@@ -5,48 +5,81 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
+using SQL;
 
 namespace MySeries.Classes
 {
-    public class Repository<T>
+    public class Repository
     {
-        private List<T> list;
+        private string table;
+        private List<Artwork> list;
 
-        public Repository() 
+        public Repository(string table)
         {
-            list = new List<T>();
+            this.table = table;
+            list = new List<Artwork>();
         }
 
-        public Repository(List<T> list)
+        public Repository(List<Artwork> list)
         {
             this.list = list;
         }
 
-        public void add(T element)
+        public void add(Artwork element)
         {
-            list.Add(element);
+            if (!list.Contains(element))
+            {
+                list.Add(element);
+                InsertToDatabaseTable(element);
+            }
         }
 
-        public void eliminate(T element)
+        public void eliminate(Artwork element)
         {
             if (list.Contains(element))
             {
                 list.Remove(element);
+                RebuildDatabaseTable();
             }
         }
 
-        public ReadOnlyCollection<T> getList()
+        public ReadOnlyCollection<Artwork> getList()
         {
             return list.AsReadOnly();            
         }
 
-        public void overwrite(T oldElement, T newElement)
+        public void overwrite(Artwork oldElement, Artwork newElement)
         {
             int index = list.IndexOf(oldElement);
             if (index != -1)
             {
                 list[index] = newElement;
+                RebuildDatabaseTable();
             }
+        }
+
+        private void InsertToDatabaseTable(Artwork element)
+        {
+            SQLConnection.ExecuteNonQuery($"INSERT INTO {table} VALUES {element.ToString()}");
+        }
+
+        private void ClearDatabaseTable()
+        {
+            SQLConnection.ExecuteNonQuery($"TRUNCATE TABLE {table}");
+        }
+
+        private void FillDatabaseTable()
+        {
+            foreach (Artwork element in list)
+            {
+                InsertToDatabaseTable(element);
+            }
+        }
+
+        private void RebuildDatabaseTable()
+        {
+            ClearDatabaseTable();
+            FillDatabaseTable();
         }
     }
 }
