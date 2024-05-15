@@ -35,5 +35,10 @@ namespace MySeries.Classes
 
             return lastName + ", " + GetAuthorFirstName()[0] + " (" + Director + "). " + " (" + Date + "). " + Title + " [Film]. " + Producer;
         }
+
+        public override string ToString()
+        {
+            return $"({GetCinemaInfo()}, {Director}, {Producer})";
+        }
     }
 }

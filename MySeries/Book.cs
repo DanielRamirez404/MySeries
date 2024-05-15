@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace MySeries.Classes
 {
@@ -39,6 +40,18 @@ namespace MySeries.Classes
                 return GetAuthorFirstName() + " (" + Date + "). " + Title + ". " + Publisher;
 
             return lastName + ", " + GetAuthorFirstName()[0] + ". (" + Date + "). " + Title + ". " + Publisher;
+        }
+
+        public override string ToString()
+        {
+            return $"({GetBaseInfo()}, {Publisher}, {Volumes}, {PagesPerVolume})";
+        }
+
+        protected string GetBookInfo()
+        {
+            string bookInfo = ToString();
+            bookInfo = bookInfo.Substring(1, bookInfo.Length - 1);
+            return bookInfo;
         }
     }
 }

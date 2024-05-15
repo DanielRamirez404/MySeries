@@ -21,5 +21,18 @@ namespace MySeries.Classes
         {
             return Volumes * GetVolumeReadingTime();
         }
+
+        public override string ToString()
+        {
+            return $"({GetBookInfo()}, {Chapters})";
+        }
+
+        protected string GetComicInfo()
+        {
+            string comicInfo = ToString();
+            comicInfo = comicInfo.Substring(1, comicInfo.Length - 1);
+            return comicInfo;
+        }
+
     }
 }

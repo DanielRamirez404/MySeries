@@ -31,5 +31,10 @@ namespace MySeries.Classes
 
             return lastName + ", " + GetAuthorFirstName()[0] + " (" + Date + "). " + Title + " [Anime]. " + Studio;
         }
+
+        public override string ToString()
+        {
+            return $"({GetCinemaInfo()}, {Studio})";
+        }
     }
 }

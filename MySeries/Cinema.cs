@@ -24,5 +24,17 @@ namespace MySeries.Classes
         {
             return Chapters * ChapterDuration;
         }
+
+        public override string ToString()
+        {
+            return $"({GetBaseInfo()}, {Chapters}, {ChapterDuration})";
+        }
+
+        protected string GetCinemaInfo()
+        {
+            string cinemaInfo = ToString();
+            cinemaInfo = cinemaInfo.Substring(1, cinemaInfo.Length - 1);
+            return cinemaInfo;
+        }
     }
 }

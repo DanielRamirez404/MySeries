@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing.Printing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -25,6 +26,11 @@ namespace MySeries.Classes
                 return GetAuthorFirstName() + " (" + Date + "). " + Title + " [Video game]. " + DevelopmentCompany;
 
             return lastName + ", " + GetAuthorFirstName()[0] + " (" + Date + "). " + Title + " [Video game]. " + DevelopmentCompany;
+        }
+
+        public override string ToString()
+        {
+            return $"({GetBaseInfo()}, {DevelopmentCompany}, {Console})";
         }
     }
 }

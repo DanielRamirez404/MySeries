@@ -14,5 +14,10 @@ namespace MySeries.Classes
         {
             this.Demography = demography;
         }
+
+        public override string ToString()
+        {
+            return $"({GetComicInfo()}, {Demography})";
+        }
     }
 }
