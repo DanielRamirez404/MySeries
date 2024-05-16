@@ -44,14 +44,7 @@ namespace MySeries.Classes
 
         public override string ToString()
         {
-            return $"({GetBaseInfo()}, {Publisher}, {Volumes}, {PagesPerVolume})";
-        }
-
-        protected string GetBookInfo()
-        {
-            string bookInfo = ToString();
-            bookInfo = bookInfo.Substring(1, bookInfo.Length - 1);
-            return bookInfo;
+            return $"('{Title}', '{Author}', '{Date}', '{Genre}', {Rating}, '{Rewiew}', \'{Publisher}\', {Volumes}, {PagesPerVolume})";
         }
     }
 }

@@ -33,17 +33,6 @@ namespace MySeries.Classes
         }
 
         public abstract string GetReference();
-        public virtual string ToString()
-        {
-            return $"({Title}, {Author}, {Date}, {Genre}, {Rating}, {Rewiew})";
-        }
-
-        protected string GetBaseInfo()
-        {
-            string baseInfo = ToString();
-            baseInfo = baseInfo.Substring(1, baseInfo.Length - 1);
-            return baseInfo;
-        }
 
         protected string GetAuthorLastName()
         {

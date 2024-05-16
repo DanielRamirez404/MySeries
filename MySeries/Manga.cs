@@ -17,7 +17,7 @@ namespace MySeries.Classes
 
         public override string ToString()
         {
-            return $"({GetComicInfo()}, {Demography})";
+            return $"({Title}', '{Author}', '{Date}', '{Genre}', {Rating}, '{Rewiew}', '{Publisher}', {Volumes}, {PagesPerVolume}, {Chapters}, \'{Demography}\')";
         }
     }
 }

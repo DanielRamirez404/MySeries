@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace MySeries
 {
@@ -16,8 +17,8 @@ namespace MySeries
     {
         private int childFormNumber = 0;
         public static Repository MyTVList = new Repository("TV");
-        public static Repository MyAnimeList = new Repository("Anime");
-        public static Repository MyBookList = new Repository("Book");
+        public static Repository MyAnimeList = new Repository("Animes");
+        public static Repository MyBookList = new Repository("Books");
         public static Repository MyComicList = new Repository("Comics");
         public static Repository MyMangaList = new Repository("Mangas");
         public static Repository MyGameList = new Repository("Videogames");
@@ -105,9 +106,13 @@ namespace MySeries
         private void MySeries_Load(object sender, EventArgs e)
         {
             SQLConnection.open();
-            TV series = new TV("Stranger Things", "Duffer", "2016", "thriller", 9, "Pretty good", 34, 45, "Duffer", "Duffer"); 
+            TV series = new TV("Stranger Things", "Duffer", "2016", "thriller", 9, "Pretty good", 34, 45, "Duffer", "Duffer");
             TV series2 = new TV("Breaking Bad", "Vince Gilligan", "2008", "drama", 8, "Awesome", 62, 45, "Vince Gilligan", "Vince Gilligan");
             TV series3 = new TV("Wednesday", "Alfred Gough", "2022", "comedy", 10, "I love Jenna Ortega", 8, 45, "Tim Burton", "Tim Burton");
+            
+            string a = series.ToString();
+            
+            //SQLConnection.ExecuteNonQuery($"insert into TV values {series.ToString()};");
             MyTVList.add(series);
             MyTVList.add(series2);
             MyTVList.add(series3);

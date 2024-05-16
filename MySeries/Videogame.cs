@@ -30,7 +30,7 @@ namespace MySeries.Classes
 
         public override string ToString()
         {
-            return $"({GetBaseInfo()}, {DevelopmentCompany}, {Console})";
+            return $"('{Title}', '{Author}', '{Date}', '{Genre}', {Rating}, '{Rewiew}', \'{DevelopmentCompany}\', \'{Console}\')";
         }
     }
 }

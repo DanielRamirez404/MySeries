@@ -39,7 +39,7 @@ namespace MySeries
             {
                 var index = dataGridView1.Rows.Add();
 
-                TV series = MySeries.MyTVList.getList()[i];
+                Artwork series = MySeries.MyTVList.getList()[i];
 
                 dataGridView1.Rows[index].Cells[0].Value = series.Title;
                 dataGridView1.Rows[index].Cells[1].Value = series.Author;

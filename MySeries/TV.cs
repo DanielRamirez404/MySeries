@@ -38,7 +38,7 @@ namespace MySeries.Classes
 
         public override string ToString()
         {
-            return $"({GetCinemaInfo()}, {Director}, {Producer})";
+            return $"('{Title}', '{Author}', '{Date}', '{Genre}', {Rating}, '{Rewiew}', {Chapters}, {ChapterDuration}, \'{Director}\', \'{Producer}\')";
         }
     }
 }

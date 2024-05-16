@@ -60,12 +60,12 @@ namespace MySeries.Classes
 
         private void InsertToDatabaseTable(Artwork element)
         {
-            SQLConnection.ExecuteNonQuery($"INSERT INTO {table} VALUES {element.ToString()}");
+            SQLConnection.ExecuteNonQuery($"INSERT INTO {table} VALUES" + element.ToString() + ";");
         }
 
         private void ClearDatabaseTable()
         {
-            SQLConnection.ExecuteNonQuery($"TRUNCATE TABLE {table}");
+            SQLConnection.ExecuteNonQuery($"TRUNCATE TABLE {table};");
         }
 
         private void FillDatabaseTable()

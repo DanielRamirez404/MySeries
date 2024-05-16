@@ -10,7 +10,7 @@ namespace SQL
 {
     public class SQLConnection
     {
-        private static string connectionString = "Server=DaniBit;Database=dataTest;Trusted_Connection=True;";
+        private static string connectionString = "Server=DaniBit;Database=MySeries;Trusted_Connection=True;";
         private static SqlConnection connection;
 
         public static void open()

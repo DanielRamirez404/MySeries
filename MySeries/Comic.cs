@@ -24,15 +24,7 @@ namespace MySeries.Classes
 
         public override string ToString()
         {
-            return $"({GetBookInfo()}, {Chapters})";
+            return $"('{Title}', '{Author}', '{Date}', '{Genre}', {Rating}, '{Rewiew}', '{Publisher}', {Volumes}, {PagesPerVolume}, {Chapters})";
         }
-
-        protected string GetComicInfo()
-        {
-            string comicInfo = ToString();
-            comicInfo = comicInfo.Substring(1, comicInfo.Length - 1);
-            return comicInfo;
-        }
-
     }
 }
