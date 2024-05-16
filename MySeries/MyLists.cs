@@ -47,6 +47,71 @@ namespace MySeries
                 dataGridView1.Rows[index].Cells[3].Value = series.Genre;
                 dataGridView1.Rows[index].Cells[4].Value = series.Rating;
             }
+
+            for (int i = 0; i < MySeries.MyAnimeList.getList().Count; i++)
+            {
+                var index = dataGridView2.Rows.Add();
+
+                Artwork series = MySeries.MyAnimeList.getList()[i];
+
+                dataGridView1.Rows[index].Cells[0].Value = series.Title;
+                dataGridView1.Rows[index].Cells[1].Value = series.Author;
+                dataGridView1.Rows[index].Cells[2].Value = series.Date;
+                dataGridView1.Rows[index].Cells[3].Value = series.Genre;
+                dataGridView1.Rows[index].Cells[4].Value = series.Rating;
+            }
+
+            for (int i = 0; i < MySeries.MyBookList.getList().Count; i++)
+            {
+                var index = dataGridView2.Rows.Add();
+
+                Artwork series = MySeries.MyBookList.getList()[i];
+
+                dataGridView1.Rows[index].Cells[0].Value = series.Title;
+                dataGridView1.Rows[index].Cells[1].Value = series.Author;
+                dataGridView1.Rows[index].Cells[2].Value = series.Date;
+                dataGridView1.Rows[index].Cells[3].Value = series.Genre;
+                dataGridView1.Rows[index].Cells[4].Value = series.Rating;
+            }
+
+            for (int i = 0; i < MySeries.MyComicList.getList().Count; i++)
+            {
+                var index = dataGridView2.Rows.Add();
+
+                Artwork series = MySeries.MyComicList.getList()[i];
+
+                dataGridView1.Rows[index].Cells[0].Value = series.Title;
+                dataGridView1.Rows[index].Cells[1].Value = series.Author;
+                dataGridView1.Rows[index].Cells[2].Value = series.Date;
+                dataGridView1.Rows[index].Cells[3].Value = series.Genre;
+                dataGridView1.Rows[index].Cells[4].Value = series.Rating;
+            }
+
+            for (int i = 0; i < MySeries.MyMangaList.getList().Count; i++)
+            {
+                var index = dataGridView2.Rows.Add();
+
+                Artwork series = MySeries.MyMangaList.getList()[i];
+
+                dataGridView1.Rows[index].Cells[0].Value = series.Title;
+                dataGridView1.Rows[index].Cells[1].Value = series.Author;
+                dataGridView1.Rows[index].Cells[2].Value = series.Date;
+                dataGridView1.Rows[index].Cells[3].Value = series.Genre;
+                dataGridView1.Rows[index].Cells[4].Value = series.Rating;
+            }
+
+            for (int i = 0; i < MySeries.MyGameList.getList().Count; i++)
+            {
+                var index = dataGridView2.Rows.Add();
+
+                Artwork series = MySeries.MyGameList.getList()[i];
+
+                dataGridView1.Rows[index].Cells[0].Value = series.Title;
+                dataGridView1.Rows[index].Cells[1].Value = series.Author;
+                dataGridView1.Rows[index].Cells[2].Value = series.Date;
+                dataGridView1.Rows[index].Cells[3].Value = series.Genre;
+                dataGridView1.Rows[index].Cells[4].Value = series.Rating;
+            }
         }
     }
 }

@@ -31,34 +31,62 @@ namespace MySeries
 
         private void Search_Load(object sender, EventArgs e)
         {
-            //todo, this is just an example
 
-            dataGridView1.Rows.Add();
+        }
 
-            dataGridView1.Rows[0].Cells[0].Value = "Manga";
-            dataGridView1.Rows[0].Cells[1].Value = "One Piece";
-            dataGridView1.Rows[0].Cells[2].Value = "Eiichiro Oda";
-            dataGridView1.Rows[0].Cells[3].Value = "1997";
-            dataGridView1.Rows[0].Cells[4].Value = "Adventure";
-            dataGridView1.Rows[0].Cells[5].Value = "10";
+        private void button12_Click(object sender, EventArgs e)
+        {
+            string searchWord = textBox1.Text;
 
-            var index = dataGridView1.Rows.Add();
+            List<Artwork> matches = new List<Artwork>();
 
-            dataGridView1.Rows[index].Cells[0].Value = "Anime";
-            dataGridView1.Rows[index].Cells[1].Value = "One Piece";
-            dataGridView1.Rows[index].Cells[2].Value = "Eiichiro Oda";
-            dataGridView1.Rows[index].Cells[3].Value = "1999";
-            dataGridView1.Rows[index].Cells[4].Value = "Adventure";
-            dataGridView1.Rows[index].Cells[5].Value = "8";
+            foreach (Artwork artwork in MySeries.MyTVList.getList())
+            {
+                if (artwork.ToString().Contains(searchWord))
+                    matches.Add(artwork);
+            }
 
-            index = dataGridView1.Rows.Add();
+            foreach (Artwork artwork in MySeries.MyAnimeList.getList())
+            {
+                if (artwork.ToString().Contains(searchWord))
+                    matches.Add(artwork);
+            }
 
-            dataGridView1.Rows[index].Cells[0].Value = "TV";
-            dataGridView1.Rows[index].Cells[1].Value = "One Piece";
-            dataGridView1.Rows[index].Cells[2].Value = "Matt Owens";
-            dataGridView1.Rows[index].Cells[3].Value = "2023";
-            dataGridView1.Rows[index].Cells[4].Value = "Live-Action";
-            dataGridView1.Rows[index].Cells[5].Value = "8";
+            foreach (Artwork artwork in MySeries.MyBookList.getList())
+            {
+                if (artwork.ToString().Contains(searchWord))
+                    matches.Add(artwork);
+            }
+            foreach (Artwork artwork in MySeries.MyComicList.getList())
+            {
+                if (artwork.ToString().Contains(searchWord))
+                    matches.Add(artwork);
+            }
+
+            foreach (Artwork artwork in MySeries.MyMangaList.getList())
+            {
+                if (artwork.ToString().Contains(searchWord))
+                    matches.Add(artwork);
+            }
+
+            foreach (Artwork artwork in MySeries.MyGameList.getList())
+            {
+                if (artwork.ToString().Contains(searchWord))
+                    matches.Add(artwork);
+            }
+
+            for (int i = 0; i < matches.Count; i++)
+            {
+                var index = dataGridView1.Rows.Add();
+
+                Artwork artwork = matches[i];
+
+                dataGridView1.Rows[index].Cells[0].Value = artwork.Title;
+                dataGridView1.Rows[index].Cells[1].Value = artwork.Author;
+                dataGridView1.Rows[index].Cells[2].Value = artwork.Date;
+                dataGridView1.Rows[index].Cells[3].Value = artwork.Genre;
+                dataGridView1.Rows[index].Cells[4].Value = artwork.Rating;
+            }
         }
     }
 }

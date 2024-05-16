@@ -17,10 +17,10 @@ namespace MySeries
     {
         private int childFormNumber = 0;
         public static Repository MyTVList = new Repository("TV");
-        public static Repository MyAnimeList = new Repository("Animes");
+        public static Repository MyAnimeList = new Repository("Anime");
         public static Repository MyBookList = new Repository("Books");
         public static Repository MyComicList = new Repository("Comics");
-        public static Repository MyMangaList = new Repository("Mangas");
+        public static Repository MyMangaList = new Repository("Manga");
         public static Repository MyGameList = new Repository("Videogames");
 
         public MySeries()
