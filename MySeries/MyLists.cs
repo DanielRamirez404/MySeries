@@ -54,63 +54,63 @@ namespace MySeries
 
                 Artwork series = MySeries.MyAnimeList.getList()[i];
 
-                dataGridView1.Rows[index].Cells[0].Value = series.Title;
-                dataGridView1.Rows[index].Cells[1].Value = series.Author;
-                dataGridView1.Rows[index].Cells[2].Value = series.Date;
-                dataGridView1.Rows[index].Cells[3].Value = series.Genre;
-                dataGridView1.Rows[index].Cells[4].Value = series.Rating;
+                dataGridView2.Rows[index].Cells[0].Value = series.Title;
+                dataGridView2.Rows[index].Cells[1].Value = series.Author;
+                dataGridView2.Rows[index].Cells[2].Value = series.Date;
+                dataGridView2.Rows[index].Cells[3].Value = series.Genre;
+                dataGridView2.Rows[index].Cells[4].Value = series.Rating;
             }
 
             for (int i = 0; i < MySeries.MyBookList.getList().Count; i++)
             {
-                var index = dataGridView2.Rows.Add();
+                var index = dataGridView3.Rows.Add();
 
                 Artwork series = MySeries.MyBookList.getList()[i];
 
-                dataGridView1.Rows[index].Cells[0].Value = series.Title;
-                dataGridView1.Rows[index].Cells[1].Value = series.Author;
-                dataGridView1.Rows[index].Cells[2].Value = series.Date;
-                dataGridView1.Rows[index].Cells[3].Value = series.Genre;
-                dataGridView1.Rows[index].Cells[4].Value = series.Rating;
+                dataGridView3.Rows[index].Cells[0].Value = series.Title;
+                dataGridView3.Rows[index].Cells[1].Value = series.Author;
+                dataGridView3.Rows[index].Cells[2].Value = series.Date;
+                dataGridView3.Rows[index].Cells[3].Value = series.Genre;
+                dataGridView3.Rows[index].Cells[4].Value = series.Rating;
             }
 
             for (int i = 0; i < MySeries.MyComicList.getList().Count; i++)
             {
-                var index = dataGridView2.Rows.Add();
+                var index = dataGridView4.Rows.Add();
 
                 Artwork series = MySeries.MyComicList.getList()[i];
 
-                dataGridView1.Rows[index].Cells[0].Value = series.Title;
-                dataGridView1.Rows[index].Cells[1].Value = series.Author;
-                dataGridView1.Rows[index].Cells[2].Value = series.Date;
-                dataGridView1.Rows[index].Cells[3].Value = series.Genre;
-                dataGridView1.Rows[index].Cells[4].Value = series.Rating;
+                dataGridView4.Rows[index].Cells[0].Value = series.Title;
+                dataGridView4.Rows[index].Cells[1].Value = series.Author;
+                dataGridView4.Rows[index].Cells[2].Value = series.Date;
+                dataGridView4.Rows[index].Cells[3].Value = series.Genre;
+                dataGridView4.Rows[index].Cells[4].Value = series.Rating;
             }
 
             for (int i = 0; i < MySeries.MyMangaList.getList().Count; i++)
             {
-                var index = dataGridView2.Rows.Add();
+                var index = dataGridView5.Rows.Add();
 
                 Artwork series = MySeries.MyMangaList.getList()[i];
 
-                dataGridView1.Rows[index].Cells[0].Value = series.Title;
-                dataGridView1.Rows[index].Cells[1].Value = series.Author;
-                dataGridView1.Rows[index].Cells[2].Value = series.Date;
-                dataGridView1.Rows[index].Cells[3].Value = series.Genre;
-                dataGridView1.Rows[index].Cells[4].Value = series.Rating;
+                dataGridView5.Rows[index].Cells[0].Value = series.Title;
+                dataGridView5.Rows[index].Cells[1].Value = series.Author;
+                dataGridView5.Rows[index].Cells[2].Value = series.Date;
+                dataGridView5.Rows[index].Cells[3].Value = series.Genre;
+                dataGridView5.Rows[index].Cells[4].Value = series.Rating;
             }
 
             for (int i = 0; i < MySeries.MyGameList.getList().Count; i++)
             {
-                var index = dataGridView2.Rows.Add();
+                var index = dataGridView6.Rows.Add();
 
                 Artwork series = MySeries.MyGameList.getList()[i];
 
-                dataGridView1.Rows[index].Cells[0].Value = series.Title;
-                dataGridView1.Rows[index].Cells[1].Value = series.Author;
-                dataGridView1.Rows[index].Cells[2].Value = series.Date;
-                dataGridView1.Rows[index].Cells[3].Value = series.Genre;
-                dataGridView1.Rows[index].Cells[4].Value = series.Rating;
+                dataGridView6.Rows[index].Cells[0].Value = series.Title;
+                dataGridView6.Rows[index].Cells[1].Value = series.Author;
+                dataGridView6.Rows[index].Cells[2].Value = series.Date;
+                dataGridView6.Rows[index].Cells[3].Value = series.Genre;
+                dataGridView6.Rows[index].Cells[4].Value = series.Rating;
             }
         }
     }

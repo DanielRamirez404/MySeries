@@ -23,7 +23,7 @@ namespace MySeries.Classes
 
         public override string ToString()
         {
-            return $"({Title}', '{Author}', '{Date}', '{Genre}', {Rating}, '{Rewiew}', '{Publisher}', {Volumes}, {PagesPerVolume}, {Chapters}, \'{Demography}\')";
+            return $"('{Title}', '{Author}', '{Date}', '{Genre}', {Rating}, '{Rewiew}', '{Publisher}', {Volumes}, {PagesPerVolume}, {Chapters}, \'{Demography}\')";
         }
     }
 }

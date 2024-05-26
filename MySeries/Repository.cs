@@ -30,7 +30,7 @@ namespace MySeries.Classes
 
         public void load()
         {
-            SqlDataReader tableReader = SQLConnection.ExecuteReader($"SELECT * FROM {table}");
+            SqlDataReader tableReader = SQLConnection.ExecuteReader($"SELECT DISTINCT * FROM {table}");
 
             if (!tableReader.HasRows)
             {
