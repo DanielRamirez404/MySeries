@@ -6,6 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using SQL;
+using System.Data;
+using System.Data.SqlClient;
+using System.Xml.Linq;
 
 namespace MySeries.Classes
 {
@@ -24,6 +27,45 @@ namespace MySeries.Classes
         {
             this.list = list;
         }
+
+        public void load()
+        {
+            SqlDataReader tableReader = SQLConnection.ExecuteReader($"SELECT * FROM {table}");
+
+            if (!tableReader.HasRows)
+            {
+                tableReader.Close();
+                return;
+            }
+
+            while (tableReader.Read())
+            {
+                switch (table)
+                {
+                    case "TV":
+                        list.Add(new TV(tableReader));
+                        break;
+                    case "Anime":
+                        list.Add(new Anime(tableReader));
+                        break;
+                    case "Books":
+                        list.Add(new Book(tableReader));
+                        break;
+                    case "Comics":
+                        list.Add(new Comic(tableReader));
+                        break;
+                    case "Manga":
+                        list.Add(new Manga(tableReader));
+                        break;
+                    case "Videogames":
+                        list.Add(new Videogame(tableReader));
+                        break;
+                }
+            }
+
+            tableReader.Close();
+        }
+
 
         public void add(Artwork element)
         {

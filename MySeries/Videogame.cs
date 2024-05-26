@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Drawing.Printing;
 using System.Linq;
 using System.Security.Policy;
@@ -18,6 +19,12 @@ namespace MySeries.Classes
             DevelopmentCompany = developmentCompany;
             Console = console;
         }
+
+        public Videogame(SqlDataReader row) : this(row.GetString(0), row.GetString(1), row.GetString(2), row.GetString(3), row.GetInt32(4), row.GetString(5), row.GetString(6), row.GetString(7))
+        {
+
+        }
+
         public override string GetReference()
         {
             string lastName = GetAuthorLastName();

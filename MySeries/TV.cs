@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace MySeries.Classes
 {
@@ -16,6 +17,11 @@ namespace MySeries.Classes
         {
             this.Director = director;
             this.Producer = producer;
+        }
+
+        public TV(SqlDataReader row) : this(row.GetString(0), row.GetString(1), row.GetString(2), row.GetString(3), row.GetInt32(4), row.GetString(5), row.GetInt32(6), row.GetInt32(7), row.GetString(8), row.GetString(9))
+        {
+
         }
 
         public override string GetCredits()

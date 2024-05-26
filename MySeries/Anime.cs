@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,11 @@ namespace MySeries.Classes
         public Anime(string title, string author, string date, string genre, int rating, string rewiew, int chapters, int duration, string studio) : base(title, author, date, genre, rating, rewiew, chapters, duration)
         {
             this.Studio = studio;
+        }
+
+        public Anime(SqlDataReader row) : this(row.GetString(0), row.GetString(1), row.GetString(2), row.GetString(3), row.GetInt32(4), row.GetString(5), row.GetInt32(6), row.GetInt32(7), row.GetString(8))
+        {
+
         }
 
         public override string GetCredits()
